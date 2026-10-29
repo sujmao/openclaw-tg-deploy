@@ -89,6 +89,19 @@ openclaw status
 | [docs/07-faq.md](docs/07-faq.md) | 常見問題（含「Couldn't sign in」） |
 | [CLAUDE.md](CLAUDE.md) | 給 Claude Code 的操作指南 |
 
+## 驗收清單（部署完成的定義）
+
+裝好 ≠ 驗收通過。請在 Telegram 私訊 bot 一個**需要思考/推理**的問題，例如：
+
+> 用中文解釋為什麼天空是藍色的，並給三個關鍵字
+
+然後確認兩點：
+
+1. ✅ bot 能**正常回覆**（不再是「Couldn't sign in to the AI service」）。
+2. ✅ 訊息裡**只看得到最終答案**——看不到任何思考過程、推理步驟或工具調用痕跡。
+
+兩點都滿足，即為部署完成。本倉庫的配置已實測通過：上述問題 bot 只回覆瑞利散射的解釋與三個關鍵字，無任何思考/工具輸出。
+
 ## 安全基線
 
 - 密鑰**永不**寫入 `openclaw.json`、永不提交進 git（本倉庫已 `.gitignore` 所有常見密鑰檔名）。
