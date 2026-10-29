@@ -1,0 +1,21 @@
+# ── 密鑰 / 憑證：絕不提交 ──────────────────────────────
+*.key
+*.token
+*.pem
+*.crt
+.env
+.env.*
+deepseekapikey.txt
+credentials*.json
+secrets*.json
+*_redacted*.json
+
+# ── 本機安裝包 / 審計產物 ──────────────────────────────
+_audit/
+install.ps1
+
+# ── 常見 ──────────────────────────────────────────────
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
