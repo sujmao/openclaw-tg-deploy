@@ -87,6 +87,8 @@ openclaw status
 | [docs/05-security-hardening.md](docs/05-security-hardening.md) | 安全加固、隱藏思考/工具調用 |
 | [docs/06-daily-operations.md](docs/06-daily-operations.md) | 重啟、手動開/關、24×7、日誌 |
 | [docs/07-faq.md](docs/07-faq.md) | 常見問題（含「Couldn't sign in」） |
+| [docs/08-paths-and-workspace.md](docs/08-paths-and-workspace.md) | 命令在哪跑、工作空間位置與限制 |
+| [POST-DEPLOY-MANUAL.md](POST-DEPLOY-MANUAL.md) | 部署後參考手冊（給人看的，隨 Release 發佈） |
 | [CLAUDE.md](CLAUDE.md) | 給 Claude Code 的操作指南 |
 
 ## 驗收清單（部署完成的定義）
@@ -95,12 +97,25 @@ openclaw status
 
 > 用中文解釋為什麼天空是藍色的，並給三個關鍵字
 
-然後確認兩點：
+然後確認三點：
 
 1. ✅ bot 能**正常回覆**（不再是「Couldn't sign in to the AI service」）。
 2. ✅ 訊息裡**只看得到最終答案**——看不到任何思考過程、推理步驟或工具調用痕跡。
+3. ✅ 能**快速開啟/關閉控制檯**：執行 `openclaw dashboard` 在瀏覽器打開 Control UI，關閉分頁即可（不影響 bot 後台運行）。
 
-兩點都滿足，即為部署完成。本倉庫的配置已實測通過：上述問題 bot 只回覆瑞利散射的解釋與三個關鍵字，無任何思考/工具輸出。
+三點都滿足，即為部署完成。本倉庫的配置已實測通過：上述問題 bot 只回覆瑞利散射的解釋與三個關鍵字，無任何思考/工具輸出。
+
+## 新手注意事項
+
+- 🔑 **密鑰/token 絕不外洩**：DeepSeek key、bot token 等同密碼，勿貼公開倉庫/群聊/截圖。
+- 👥 **白名單只加自己**：勿把 `dmPolicy` 改成 `open`，否則知道 bot 用戶名的人都能用你的餘額。
+- 🏠 **別動 `gateway.bind`**：保持 `loopback`，勿改 lan/公網。
+- 💰 **DeepSeek 按量付費**：留意餘額；bot 讓別人用 = 花你的錢。
+- 🔄 **改配置後要重啟**：`openclaw gateway restart` 才生效。
+- 🖥️ **關控制檯 ≠ 停 bot**（見驗收清單第 3 條）。
+- 😴 **睡眠/登出會停 bot**：想 24×7 常駐要關閉系統睡眠。
+- 📁 **別把敏感文件放進 `~\.openclaw\workspace\`**：agent 讀得到那裡面。
+- ✅ **首次 UAC 彈窗是 Node.js 升級**：正常，點「是」。
 
 ## 安全基線
 

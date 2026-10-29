@@ -69,3 +69,15 @@ C:\Users\<你>\.openclaw\
 - 重新設置密鑰：重跑 `openclaw models auth paste-api-key --provider deepseek`，然後 `openclaw gateway restart`。
 
 進入 [`07-faq.md`](07-faq.md) 看常見坑。
+
+## 6.7 快速開啟 / 關閉控制檯（Control UI）
+
+| 動作 | 命令 / 做法 |
+|---|---|
+| 開啟（網頁控制台） | `openclaw dashboard` —— 自動帶 token 在瀏覽器打開 `http://127.0.0.1:18789/` |
+| 開啟（終端 UI） | `openclaw tui`（或 `openclaw terminal`） |
+| 關閉（網頁） | 關掉瀏覽器分頁即可 |
+| 關閉（終端） | 在 TUI 內按 `Ctrl+C` 退出 |
+
+> ⚠️ **關閉控制檯 ≠ 關閉 bot**：bot 由後台 gateway 常駐，關掉控制台它照樣在 Telegram 回應；真要停 bot 用 `openclaw daemon stop`。
+> 所有 `openclaw` 命令在任何目錄都能直接跑，不需要先 `cd`（詳見 [`08-paths-and-workspace.md`](08-paths-and-workspace.md)）。
