@@ -92,3 +92,13 @@ openclaw status
 - 「Couldn't sign in to the AI service」→ 密鑰沒進 gateway 進程，見 FAQ-1：用 `paste-api-key` + `openclaw gateway restart`。
 - 「Config invalid: Unrecognized key: suppressNarrationOnMessaging」→ 刪掉該 key，見 FAQ-2。
 - Telegram 沒反應 → 檢查白名單/配對/代理，見 FAQ-4、FAQ-5。
+
+## 發佈規範（Release）
+
+每次發佈「部署後參考手冊」，必須**同時出三個語言版本**，文件名固定：
+
+- `manual/POST-DEPLOY-MANUAL.zh-TW.md`（繁體中文）
+- `manual/POST-DEPLOY-MANUAL.zh-CN.md`（简体中文）
+- `manual/POST-DEPLOY-MANUAL.en.md`（English）
+
+三版內容同步、同一版本號，用 `gh release create vX.Y.Z` 把三個文件都作為附件上傳。改動任何一版時，必須同步翻譯並更新另外兩版。
