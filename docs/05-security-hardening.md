@@ -45,6 +45,8 @@ OpenClaw 官方微信插件 `@tencent-weixin/openclaw-weixin` 曾存在訪問控
 2. 手動核對白名單確實生效（用非白名單帳號試發、確認被拒）；
 3. 綁定後再審計一遍 `openclaw status --deep`。
 
+> 為什麼微信比 Telegram 危險、別人怎麼「用聊天」遠程指揮你的 agent、以及「先後綁定多個微信號是否會放行歷史用戶」的完整解析，見 [`09-wechat-security.md`](09-wechat-security.md)。
+
 ## 5.6 定期做一次安全自檢
 
 ```powershell

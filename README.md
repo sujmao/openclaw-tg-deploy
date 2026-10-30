@@ -88,6 +88,7 @@ openclaw status
 | [docs/06-daily-operations.md](docs/06-daily-operations.md) | 重啟、手動開/關、24×7、日誌 |
 | [docs/07-faq.md](docs/07-faq.md) | 常見問題（含「Couldn't sign in」） |
 | [docs/08-paths-and-workspace.md](docs/08-paths-and-workspace.md) | 命令在哪跑、工作空間位置與限制 |
+| [docs/09-wechat-security.md](docs/09-wechat-security.md) | 微信頻道安全解析（為什麼暫緩微信） |
 | [manual/POST-DEPLOY-MANUAL.zh-TW.md](manual/POST-DEPLOY-MANUAL.zh-TW.md) | 部署後參考手冊 · 繁體中文（隨 Release 發佈） |
 | [manual/POST-DEPLOY-MANUAL.zh-CN.md](manual/POST-DEPLOY-MANUAL.zh-CN.md) | 部署後參考手冊 · 简体中文 |
 | [manual/POST-DEPLOY-MANUAL.en.md](manual/POST-DEPLOY-MANUAL.en.md) | 部署後參考手冊 · English |
